@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Generador de Códigos QR</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">QR Code Generator</h1>
+            <p class="subtitle">Crea códigos QR personalizables al instante</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-section">
+                <h2 class="section-title">Configuración del QR</h2>
+                
+                <div class="form-group">
+                    <label for="qr-type" class="label">Tipo de Contenido</label>
+                    <select id="qr-type" class="input select">
+                        <option value="url">URL / Sitio Web</option>
+                        <option value="text">Texto Plano</option>
+                        <option value="phone">Número de Teléfono</option>
+                        <option value="email">Correo Electrónico</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="vcard">Tarjeta de Contacto (vCard)</option>
+                        <option value="wifi">WiFi</option>
+                        <option value="location">Ubicación (Coordenadas)</option>
+                    </select>
+                </div>
+
+                <div id="input-fields" class="input-fields">
+                    <!-- Los campos se generarán dinámicamente -->
+                </div>
+
+                <button id="generate-btn" class="btn btn-primary">Generar Código QR</button>
+            </div>
+
+            <div class="preview-section">
+                <h2 class="section-title">Vista Previa</h2>
+                <div id="qr-result" class="qr-result">
+                    <p class="placeholder">Tu código QR aparecerá aquí</p>
+                </div>
+                <button id="download-btn" class="btn btn-secondary" style="display: none;">
+                    ⬇️ Descargar PNG
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 QR Code Generator. Diseño minimalista moderno.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
